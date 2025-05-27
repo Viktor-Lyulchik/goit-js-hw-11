@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#datetime-picker {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  background-color: #fff;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-right: 8px;
+  margin-bottom: 32px;
+}
+
+#datetime-picker:hover:not(:disabled) {
+  border: 1px solid #000;
+  background: #fff;
+  color: #2e2f42;
+}
+
+#datetime-picker:active:not(:disabled) {
+  border: 1px solid #4e75ff;
+  background: #fff;
+  color: #000;
+}
+
+#datetime-picker:disabled {
+  border: 1px solid #808080;
+  background: #fafafa;
+  color: #808080;
+}
+
+button {
+  border-color: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  background-color: #4e75ff;
+  color: #fff;
+}
+
+button:disabled {
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+button:hover:not(:disabled) {
+  background: #6c8cff;
+  color: #fff;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: #2e2f42;
+  text-transform: uppercase;
+}
+
+/* form */
+
+.form {
+  max-width: 360px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form > label > input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.form > label > input:hover {
+  border-color: #000;
+}
+
+fieldset {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  margin-bottom: 24px;
+}
+
+fieldset:hover {
+  border-color: #000;
+}
+
+fieldset:has(input[type='radio']:checked) {
+  border-color: #000;
+}
+
+.ragio-grp {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+form > button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  background-color: #4e75ff;
+}
