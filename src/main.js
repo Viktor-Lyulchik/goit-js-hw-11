@@ -20,17 +20,19 @@ queryForm.addEventListener('submit', event => {
   event.preventDefault();
   const userQuery = event.currentTarget.elements['search-text'].value.trim();
 
+  clearGallery();
+  showLoader();
+
   if (userQuery === '') {
     event.currentTarget.elements['search-text'].value = '';
     iziToast.error({
       title: 'Error',
       message: 'Your query is empty, enter the query text in search field!',
     });
+    hideLoader();
     return;
   }
 
-  clearGallery();
-  showLoader();
   getImagesByQuery(userQuery)
     .then(response => {
       const hits = response.data.hits;

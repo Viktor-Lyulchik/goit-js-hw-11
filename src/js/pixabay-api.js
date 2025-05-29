@@ -13,6 +13,7 @@ export function getImagesByQuery(query) {
       image_type: 'photo',
       orientation: 'horizontal',
       safesearch: 'true',
+      per_page: 60,
     },
   });
 }

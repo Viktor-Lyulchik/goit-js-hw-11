@@ -50,6 +50,10 @@ export function createGallery(images) {
     .join('');
   gallery.innerHTML = listHTML;
 
+  reBuildGallery();
+}
+
+function reBuildGallery() {
   if (!galleryLB) {
     galleryLB = new SimpleLightbox('.gallery a', {
       captions: true,
@@ -64,6 +68,7 @@ export function createGallery(images) {
 
 export function clearGallery() {
   gallery.innerHTML = '';
+  reBuildGallery();
 }
 
 export function showLoader() {
