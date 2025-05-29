@@ -21,6 +21,7 @@ queryForm.addEventListener('submit', event => {
   const userQuery = event.currentTarget.elements['search-text'].value.trim();
 
   if (userQuery === '') {
+    event.currentTarget.elements['search-text'].value = '';
     iziToast.error({
       title: 'Error',
       message: 'Your query is empty, enter the query text in search field!',
